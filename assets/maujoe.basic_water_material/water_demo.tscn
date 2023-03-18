@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cilbefjqea3lt"]
+
+[ext_resource type="PackedScene" uid="uid://dygeg2q28yojq" path="res://assets/maujoe.basic_water_material/models/terrain.tscn" id="1_dnpil"]
+[ext_resource type="Texture2D" uid="uid://dnou0agchnpu4" path="res://assets/maujoe.basic_water_material/textures/cloud_layers_1k.hdr" id="2_ihxyp"]
+[ext_resource type="PackedScene" uid="uid://cb3afyych1lw2" path="res://assets/maujoe.basic_water_material/basic_water.tscn" id="3_wk16n"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fce8b"]
+panorama = ExtResource("2_ihxyp")
+
+[sub_resource type="Sky" id="1"]
+sky_material = SubResource("PanoramaSkyMaterial_fce8b")
+radiance_size = 4
+
+[sub_resource type="Environment" id="2"]
+background_mode = 2
+sky = SubResource("1")
+ssao_intensity = 1.0
+
+[node name="Node" type="Node"]
+
+[node name="terrain" parent="." instance=ExtResource("1_dnpil")]
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(0.821155, 0, -0.570705, 0, 1, 0, 0.570705, 0, 0.821155, -10.0408, 1.29057, 13.15)
+fov = 70.0
+far = 100.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("2")
+
+[node name="Water" parent="." instance=ExtResource("3_wk16n")]
