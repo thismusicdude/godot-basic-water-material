@@ -6,10 +6,11 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=3
+config_version=5
 
 [application]
 
 config/name="Basic Water Material"
-run/main_scene="res://assets/maujoe.basic_water_material/basic_water_material.tscn"
+run/main_scene="res://assets/maujoe.basic_water_material/water_demo.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://assets/maujoe.basic_water_material/icon.png"
