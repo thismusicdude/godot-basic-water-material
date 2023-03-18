@@ -1,6 +1,6 @@
-# Basic Water Material
+# Maujoe's Basic Water Material
 
-A basic water material for the Godot Engine 3.x.
+A basic water material created by Maujoe ported from 3.2 to the Godot Engine 4.x.
 
 #### Video/How To:
 https://youtu.be/jbYrpKWTlpw
